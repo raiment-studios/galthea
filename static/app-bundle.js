@@ -24411,53 +24411,88 @@
   });
   var import_react = __toESM(require_react());
   var import_jsx_runtime = __toESM(require_jsx_runtime());
+  function createLink(rel, href, crossorigin) {
+    const link = document.createElement("link");
+    link.rel = rel;
+    link.href = href;
+    if (crossorigin) {
+      link.crossOrigin = "";
+    }
+    document.head.appendChild(link);
+  }
   function App() {
-    import_react.default.useEffect(() => {
-      document.body.style.backgroundColor = "rgba(0,0,0,0.025)";
+    import_react.default.useLayoutEffect(() => {
+      const style = document.body.style;
+      createLink("preconnect", "https://fonts.gstatic.com");
+      createLink("preconnect", "https://fonts.googleapis.com", true);
+      createLink(
+        "stylesheet",
+        "https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;500;700&display=swap"
+      );
+      style.backgroundColor = "rgba(0,0,0,0.025)";
+      style.fontFamily = `'Noto Sans Mono', monospace`;
+      style.fontSize = "0.8em";
+      style.padding = "0";
+      style.margin = "0";
     }, []);
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-      "div",
-      {
-        style: {
-          width: "42rem",
-          margin: "2rem auto 8rem",
-          padding: "2rem 4rem 4rem",
-          border: "solid 1px #CCC",
-          borderRadius: 4,
-          backgroundColor: "#FFF",
-          fontFamily: "monospace"
-        },
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { children: "Welcome to Galthea!" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "An open world adventure game with an open license designed to make contributing and expanding and contributing to the world enjoyable and easy." }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Galthea is inspired by the classic game Daggerfall while set in a voxel-based world designed to evoke the creative freedom of Minecraft." }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heading1, { text: "Releases" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Galthea: Winter's Beckon (full voxel-world)" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "TODO" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Not yet available for download" }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Galthea: Beginnings (2D prototype, in development)" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "The prototype is optimized to rapidly explore and prototype game concepts in a simplified environment from the full build. The prototype is a 2D tile-based implementation of Galthea written in TypeScript." }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Not yet available for download" }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heading1, { text: "Latest updates" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "TODO" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heading1, { text: "Contributing" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Galthea is developed as a series of sub-projects:" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { children: [
-            "Worldbuilding",
-            "Core formats",
-            "Core libraries",
-            "Game system",
-            "Tile Engine",
-            "Voxel Engine",
-            "Content browser",
-            "Content editors",
-            "Galthea: Winter's Beckon Distribution",
-            "Galthea: Beginnings",
-            "Galthea: Base Game"
-          ].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: item }, item)) })
-        ]
-      }
-    );
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        "div",
+        {
+          style: {
+            backgroundColor: "#334",
+            color: "#eee",
+            padding: "8px 32px",
+            boxShadow: "1px 1px 11px 4px rgba(0,0,0,0.05)",
+            fontWeight: "bold"
+          },
+          children: "Raiment Studios"
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+        "div",
+        {
+          style: {
+            width: "42rem",
+            margin: "2rem auto 8rem",
+            padding: "2rem 4rem 4rem",
+            border: "solid 1px #CCC",
+            borderRadius: 4,
+            backgroundColor: "#FFF",
+            boxShadow: "1px 1px 11px 4px rgba(0,0,0,0.05)"
+          },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { children: "Welcome to Galthea!" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "An open world adventure game with an open license designed to make contributing and expanding and contributing to the world enjoyable and easy." }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Galthea is inspired by the classic game Daggerfall while set in a voxel-based world designed to evoke the creative freedom of Minecraft." }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heading1, { text: "Releases" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Galthea: Winter's Beckon (full voxel-world)" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "TODO" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Not yet available for download" }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Galthea: Beginnings (2D prototype, in development)" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "The prototype is optimized to rapidly explore and prototype game concepts in a simplified environment from the full build. The prototype is a 2D tile-based implementation of Galthea written in TypeScript." }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Not yet available for download" }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heading1, { text: "Latest updates" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "TODO" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heading1, { text: "Contributing" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Galthea is developed as a series of sub-projects:" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { children: [
+              "Worldbuilding",
+              "Core formats",
+              "Core libraries",
+              "Game system",
+              "Tile Engine",
+              "Voxel Engine",
+              "Content browser",
+              "Content editors",
+              "Galthea: Winter's Beckon Distribution",
+              "Galthea: Beginnings",
+              "Galthea: Base Game"
+            ].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: item }, item)) })
+          ]
+        }
+      )
+    ] });
   }
   function Heading1({ text }) {
     return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [

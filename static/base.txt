@@ -64,6 +64,7 @@ static/base/sprites/tile061.png
 static/base/sprites/tile013.png
 static/base/sprites/tile025.png
 static/base/sprites/tree-01.png
+static/base/sprites/commoner-mod-05.png
 static/base/sprites/commoner-03.png
 static/base/sprites/rabbit.png
 static/base/sprites/tile049.png

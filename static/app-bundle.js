@@ -5,6 +5,9 @@
   var __getOwnPropNames = Object.getOwnPropertyNames;
   var __getProtoOf = Object.getPrototypeOf;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __esm = (fn, res) => function __init() {
+    return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
+  };
   var __commonJS = (cb, mod) => function __require() {
     return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
   };
@@ -28,6 +31,7 @@
     isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
     mod
   ));
+  var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
   // node_modules/react/cjs/react.development.js
   var require_react_development = __commonJS({
@@ -2437,7 +2441,7 @@
           var HostPortal = 4;
           var HostComponent = 5;
           var HostText = 6;
-          var Fragment2 = 7;
+          var Fragment3 = 7;
           var Mode = 8;
           var ContextConsumer = 9;
           var ContextProvider = 10;
@@ -3593,7 +3597,7 @@
                 return "DehydratedFragment";
               case ForwardRef:
                 return getWrappedName$1(type, type.render, "ForwardRef");
-              case Fragment2:
+              case Fragment3:
                 return "Fragment";
               case HostComponent:
                 return type;
@@ -13264,7 +13268,7 @@
               }
             }
             function updateFragment2(returnFiber, current2, fragment, lanes, key) {
-              if (current2 === null || current2.tag !== Fragment2) {
+              if (current2 === null || current2.tag !== Fragment3) {
                 var created = createFiberFromFragment(fragment, returnFiber.mode, lanes, key);
                 created.return = returnFiber;
                 return created;
@@ -13667,7 +13671,7 @@
                 if (child.key === key) {
                   var elementType = element.type;
                   if (elementType === REACT_FRAGMENT_TYPE) {
-                    if (child.tag === Fragment2) {
+                    if (child.tag === Fragment3) {
                       deleteRemainingChildren(returnFiber, child.sibling);
                       var existing = useFiber(child, element.props.children);
                       existing.return = returnFiber;
@@ -17842,7 +17846,7 @@
                 var _resolvedProps2 = workInProgress2.elementType === type ? _unresolvedProps2 : resolveDefaultProps(type, _unresolvedProps2);
                 return updateForwardRef(current2, workInProgress2, type, _resolvedProps2, renderLanes2);
               }
-              case Fragment2:
+              case Fragment3:
                 return updateFragment(current2, workInProgress2, renderLanes2);
               case Mode:
                 return updateMode(current2, workInProgress2, renderLanes2);
@@ -18115,7 +18119,7 @@
               case SimpleMemoComponent:
               case FunctionComponent:
               case ForwardRef:
-              case Fragment2:
+              case Fragment3:
               case Mode:
               case Profiler:
               case ContextConsumer:
@@ -22374,7 +22378,7 @@
             return fiber;
           }
           function createFiberFromFragment(elements, mode, lanes, key) {
-            var fiber = createFiber(Fragment2, elements, key, mode);
+            var fiber = createFiber(Fragment3, elements, key, mode);
             fiber.lanes = lanes;
             return fiber;
           }
@@ -24379,11 +24383,11 @@
               return jsxWithValidation(type, props, key, false);
             }
           }
-          var jsx3 = jsxWithValidationDynamic;
-          var jsxs2 = jsxWithValidationStatic;
+          var jsx4 = jsxWithValidationDynamic;
+          var jsxs3 = jsxWithValidationStatic;
           exports.Fragment = REACT_FRAGMENT_TYPE;
-          exports.jsx = jsx3;
-          exports.jsxs = jsxs2;
+          exports.jsx = jsx4;
+          exports.jsxs = jsxs3;
         })();
       }
     }
@@ -24401,6 +24405,56 @@
     }
   });
 
+  // src/pages/inspiration.tsx
+  var inspiration_exports = {};
+  __export(inspiration_exports, {
+    default: () => inspiration_default
+  });
+  function inspiration_default() {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { children: "Inspiration" }),
+      [
+        {
+          text: "Teardown",
+          href: "https://teardowngame.com/"
+        },
+        {
+          text: "IOLITE Voxel Game Engine",
+          href: "https://iolite-engine.com/"
+        },
+        {
+          text: "The Bard's Tale I: Tales of the Unknown",
+          href: "https://www.whatisthe2gs.apple2.org.za/bard-s-tale-i-tales-of-the-unknown-the.html"
+        },
+        {
+          text: "Daggerfall",
+          href: "https://en.wikipedia.org/wiki/The_Elder_Scrolls_II:_Daggerfall"
+        },
+        {
+          text: "Castles and Kingdoms",
+          href: "https://kingdomsandcastles.com/"
+        },
+        {
+          text: "King's Quest I",
+          href: "https://en.wikipedia.org/wiki/King%27s_Quest_I"
+        },
+        {
+          text: "Minecraft",
+          href: "https://en.wikipedia.org/wiki/Minecraft"
+        }
+      ].map(({ text, href }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: text && href ? (
+        //
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href, target: "_blank", children: text })
+      ) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: text }) }))
+    ] });
+  }
+  var import_jsx_runtime;
+  var init_inspiration = __esm({
+    "src/pages/inspiration.tsx"() {
+      import_jsx_runtime = __toESM(require_jsx_runtime());
+    }
+  });
+
   // src/__generated/__bootstrap.tsx
   var import_client = __toESM(require_client());
 
@@ -24410,7 +24464,7 @@
     App: () => App
   });
   var import_react = __toESM(require_react());
-  var import_jsx_runtime = __toESM(require_jsx_runtime());
+  var import_jsx_runtime2 = __toESM(require_jsx_runtime());
   function createLink(rel, href, crossorigin) {
     const link = document.createElement("link");
     link.rel = rel;
@@ -24420,8 +24474,17 @@
     }
     document.head.appendChild(link);
   }
+  var sitePages = [
+    { name: "Worldbuilding", component: Worldbuilding },
+    { name: "Core formats", component: CoreFormats },
+    { name: "Inspiration", component: (init_inspiration(), __toCommonJS(inspiration_exports)).default }
+  ];
   function App() {
+    const [pages, setPages] = import_react.default.useState(
+      new Set(sitePages.map(({ component }) => component))
+    );
     import_react.default.useLayoutEffect(() => {
+      document.title = "Raiment Studios: Galthea";
       const style = document.body.style;
       createLink("preconnect", "https://fonts.gstatic.com");
       createLink("preconnect", "https://fonts.googleapis.com", true);
@@ -24435,78 +24498,139 @@
       style.padding = "0";
       style.margin = "0";
     }, []);
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
         "div",
         {
           style: {
-            backgroundColor: "#334",
-            color: "#eee",
-            padding: "8px 32px",
-            boxShadow: "1px 1px 11px 4px rgba(0,0,0,0.05)",
-            fontWeight: "bold"
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            marginBottom: "4em"
           },
-          children: "Raiment Studios"
+          children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+            "div",
+            {
+              style: {
+                backgroundColor: "#334",
+                color: "#eee",
+                padding: "8px 32px",
+                boxShadow: "1px 1px 11px 4px rgba(0,0,0,0.5)",
+                fontWeight: "bold"
+              },
+              children: "Raiment Studios"
+            }
+          )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-        "div",
-        {
-          style: {
-            width: "42rem",
-            margin: "2rem auto 8rem",
-            padding: "2rem 4rem 4rem",
-            border: "solid 1px #CCC",
-            borderRadius: 4,
-            backgroundColor: "#FFF",
-            boxShadow: "1px 1px 11px 4px rgba(0,0,0,0.05)"
-          },
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { children: "Welcome to Galthea!" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "An open world adventure game with an open license designed to make contributing and expanding and contributing to the world enjoyable and easy." }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Galthea is inspired by the classic game Daggerfall while set in a voxel-based world designed to evoke the creative freedom of Minecraft." }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heading1, { text: "Releases" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Galthea: Winter's Beckon (full voxel-world)" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "TODO" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Not yet available for download" }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Galthea: Beginnings (2D prototype, in development)" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "The prototype is optimized to rapidly explore and prototype game concepts in a simplified environment from the full build. The prototype is a 2D tile-based implementation of Galthea written in TypeScript." }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "Not yet available for download" }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heading1, { text: "Latest updates" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "TODO" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heading1, { text: "Contributing" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Galthea is developed as a series of sub-projects:" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", { children: [
-              "Worldbuilding",
-              "Core formats",
-              "Core libraries",
-              "Game system",
-              "Tile Engine",
-              "Voxel Engine",
-              "Content browser",
-              "Content editors",
-              "Galthea: Winter's Beckon Distribution",
-              "Galthea: Beginnings",
-              "Galthea: Base Game"
-            ].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: item }, item)) })
-          ]
-        }
-      )
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { style: { height: "2.5em" } }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(Page, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h1", { children: "Welcome to Galthea!" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: "An open world adventure game with an open license designed to make contributing and expanding and contributing to the world enjoyable and easy." }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: "Galthea is inspired by the classic game Daggerfall while set in a voxel-based world designed to evoke the creative freedom of Minecraft." }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Heading1, { text: "Releases" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", { children: "Galthea: Winter's Beckon (full voxel-world)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: "TODO" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("em", { children: "Not yet available for download" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h2", { children: "Galthea: Beginnings (2D prototype, in development)" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: "The prototype is optimized to rapidly explore and prototype game concepts in a simplified environment from the full build. The prototype is a 2D tile-based implementation of Galthea written in TypeScript." }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("em", { children: "Not yet available for download" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Heading1, { text: "Latest updates" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: "TODO" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Heading1, { text: "Contributing" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { children: "Galthea is developed as a series of sub-projects:" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("ul", { children: [
+          sitePages.map(({ name, component }) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+            "a",
+            {
+              id: `source-${name.toLowerCase().replace(/[^a-z0-9_]/g, "_").replace(/__+/g, "_")}`,
+              href: "#",
+              onClick: (evt) => {
+                evt.preventDefault();
+                setPages((pages2) => /* @__PURE__ */ new Set([...pages2, component]));
+                history.pushState(
+                  void 0,
+                  "",
+                  `#source-${name.toLowerCase().replace(/[^a-z0-9_]/g, "_").replace(/__+/g, "_")}`
+                );
+                const id = component.name.toLowerCase().replace(/[^a-z0-9_]/g, "_").replace(/__+/g, "_");
+                setTimeout(() => {
+                  const el = document.getElementById(id);
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                    history.pushState(void 0, "", `#${id}`);
+                  }
+                }, 150);
+              },
+              children: name
+            }
+          ) }, name)),
+          [
+            "Core libraries",
+            "Game system",
+            "Tile Engine",
+            "Voxel Engine",
+            "Content browser",
+            "Content editors",
+            "Galthea: Winter's Beckon Distribution",
+            "Galthea: Beginnings",
+            "Galthea: Base Game"
+          ].map((item) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("li", { children: item }, item))
+        ] })
+      ] }),
+      Array.from(pages).map((Comp, index) => /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_react.default.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+          "a",
+          {
+            style: {
+              position: "absolute",
+              marginTop: "-4em"
+            },
+            id: Comp.name.toLowerCase().replace(/[^a-z0-9_]/g, "_").replace(/__+/g, "_")
+          }
+        ),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Page, { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Comp, {}) })
+      ] }, index))
     ] });
   }
+  function Worldbuilding() {
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_jsx_runtime2.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h1", { children: "Worldbuilding" }) });
+  }
+  function CoreFormats() {
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_jsx_runtime2.Fragment, { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h1", { children: "Core Formats" }) });
+  }
+  function Page({ children }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+      "div",
+      {
+        style: {
+          width: "42rem",
+          minHeight: "60rem",
+          margin: "2rem auto 4rem",
+          padding: "2rem 4rem 4rem",
+          border: "solid 1px #CCC",
+          borderRadius: 4,
+          backgroundColor: "#FFF",
+          boxShadow: "1px 1px 11px 4px rgba(0,0,0,0.05)"
+        },
+        children
+      }
+    );
+  }
   function Heading1({ text }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { marginBottom: "3rem" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { id: text.trim().toLowerCase().replace(/\s+/g, "-") }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { children: text })
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { style: { marginBottom: "3rem" }, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("a", { id: text.trim().toLowerCase().replace(/\s+/g, "-") }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h1", { children: text })
     ] });
   }
 
   // src/__generated/__bootstrap.tsx
-  var import_jsx_runtime2 = __toESM(require_jsx_runtime());
+  var import_jsx_runtime3 = __toESM(require_jsx_runtime());
   var { main, App: App2 } = main_exports;
   var Platform = class {
     initReact(App3) {
-      const element = document.body;
+      const element = document.getElementById("root");
       const root = import_client.default.createRoot(element);
       root.render(App3);
     }
@@ -24514,7 +24638,7 @@
   async function preMain() {
     const platform = new Platform();
     if (App2) {
-      platform.initReact(/* @__PURE__ */ (0, import_jsx_runtime2.jsx)(App2, {}));
+      platform.initReact(/* @__PURE__ */ (0, import_jsx_runtime3.jsx)(App2, {}));
     } else if (main) {
       main({ platform });
     } else {
